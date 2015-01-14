@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PostureKeeper : MonoBehaviour {
 
-	public float velocity = 2;
+	public float velocity = 5;
 
 
 	// Use this for initialization

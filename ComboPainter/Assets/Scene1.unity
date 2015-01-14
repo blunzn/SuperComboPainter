@@ -275,10 +275,10 @@ SliderJoint2D:
   m_ConnectedAnchor: {x: .100000001, y: -.800000012}
   serializedVersion: 2
   m_Angle: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 20
   m_UseLimits: 1
   m_TranslationLimits:
     m_LowerTranslation: -5
@@ -470,6 +470,10 @@ Prefab:
       propertyPath: m_ConnectedAnchor.x
       value: .00999999791
       objectReference: {fileID: 0}
+    - target: {fileID: 23380302, guid: 88c4d6efa881b49fe8cc767b5fa80845, type: 2}
+      propertyPath: m_Motor.m_MaximumMotorForce
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88c4d6efa881b49fe8cc767b5fa80845, type: 2}
   m_RootGameObject: {fileID: 1370138691}
@@ -617,6 +621,7 @@ GameObject:
   - 50: {fileID: 862392865}
   - 61: {fileID: 862392864}
   - 233: {fileID: 862392863}
+  - 114: {fileID: 862392869}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -639,7 +644,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 50
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: -10
@@ -715,6 +720,18 @@ Transform:
   - {fileID: 533706890}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &862392869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 862392862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d6e7d63b56a4c0ca2f2e8f6f06b61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 5
 --- !u!1001 &1130709833
 Prefab:
   m_ObjectHideFlags: 0
@@ -813,6 +830,7 @@ GameObject:
   - 50: {fileID: 1370138694}
   - 61: {fileID: 1370138693}
   - 233: {fileID: 1370138692}
+  - 114: {fileID: 1370138698}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -835,7 +853,7 @@ HingeJoint2D:
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MaximumMotorForce: 10
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: -10
@@ -910,6 +928,18 @@ Transform:
   - {fileID: 600030471}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1370138698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370138691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d6e7d63b56a4c0ca2f2e8f6f06b61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 5
 --- !u!1 &1393063086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1136,10 @@ Prefab:
     - target: {fileID: 23380302, guid: 88c4d6efa881b49fe8cc767b5fa80845, type: 2}
       propertyPath: m_ConnectedAnchor.y
       value: .745000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 23380302, guid: 88c4d6efa881b49fe8cc767b5fa80845, type: 2}
+      propertyPath: m_Motor.m_MaximumMotorForce
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88c4d6efa881b49fe8cc767b5fa80845, type: 2}
