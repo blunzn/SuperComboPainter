@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PostureKeeper : MonoBehaviour {
 
+	public float velocity = 2;
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,7 +16,8 @@ public class PostureKeeper : MonoBehaviour {
 		HingeJoint2D j = gameObject.GetComponent<HingeJoint2D> ();
 		float deltaAngle = j.jointAngle;
 		JointMotor2D motor = j.motor;
-		motor.motorSpeed = deltaAngle;
+		motor.motorSpeed = -deltaAngle * velocity;
+		gameObject.GetComponent<HingeJoint2D> ().motor = motor;
 	}
 
 }
