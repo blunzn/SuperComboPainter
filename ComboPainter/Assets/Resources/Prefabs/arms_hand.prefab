@@ -37,7 +37,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163788}
-  m_Mass: .100000001
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  key: a
 --- !u!212 &21263788
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -93,10 +94,10 @@ SliderJoint2D:
   m_ConnectedAnchor: {x: 3.26999998, y: .0210000277}
   serializedVersion: 2
   m_Angle: 90
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MotorSpeed: -200
+    m_MaximumMotorForce: 10
   m_UseLimits: 1
   m_TranslationLimits:
     m_LowerTranslation: -1

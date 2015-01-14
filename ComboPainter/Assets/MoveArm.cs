@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MoveArm : MonoBehaviour {
 	public float speed = 500;
+	public string key = "a";
 	// Use this for initialization
 	void Start () {
 	
@@ -11,15 +12,16 @@ public class MoveArm : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		JointMotor2D motor = gameObject.GetComponent<SliderJoint2D> ().motor;
-		if (Input.GetKey (KeyCode.UpArrow)) {
-						motor.motorSpeed = -speed;
-				} else if (Input.GetKey (KeyCode.DownArrow)) {
-			
-						motor.motorSpeed = speed;
+		SliderJoint2D slider = gameObject.GetComponent<SliderJoint2D> ();
+		if (Input.GetKey (key)) {
+			slider.useMotor = true;
+//				} else if (Input.GetKey (KeyCode.DownArrow)) {
+//			
+//						motor.motorSpeed = speed;
 				} else {
-						motor.motorSpeed = 0;
+			slider.useMotor = false;
 				}
 
-		gameObject.GetComponent<SliderJoint2D> ().motor = motor;
+//		gameObject.GetComponent<SliderJoint2D> ().motor = motor;
 	}
 }

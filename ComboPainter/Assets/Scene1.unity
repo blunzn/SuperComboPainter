@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  key: l
 --- !u!234 &533706892
 SliderJoint2D:
   m_ObjectHideFlags: 0
@@ -368,9 +369,9 @@ SliderJoint2D:
   m_ConnectedAnchor: {x: 2.91000009, y: .110000014}
   serializedVersion: 2
   m_Angle: 90
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: -200
     m_MaximumMotorForce: 10
   m_UseLimits: 1
   m_TranslationLimits:
@@ -383,7 +384,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1130709833}
   m_GameObject: {fileID: 533706889}
-  m_Mass: .100000001
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -796,14 +797,6 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 862392865}
-    - target: {fileID: 5063788, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
-      propertyPath: m_Mass
-      value: .100000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 23463788, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
-      propertyPath: m_Motor.m_MaximumMotorForce
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 21263788, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -812,6 +805,10 @@ Prefab:
     - target: {fileID: 163788, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
       propertyPath: m_Name
       value: arms_hand_right
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463788, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
+      propertyPath: key
+      value: l
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
@@ -850,6 +847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  key: j
 --- !u!234 &1263915167
 SliderJoint2D:
   m_ObjectHideFlags: 0
@@ -864,10 +862,10 @@ SliderJoint2D:
   m_ConnectedAnchor: {x: -3.0999999, y: -.139999986}
   serializedVersion: 2
   m_Angle: 90
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MotorSpeed: -200
+    m_MaximumMotorForce: 10
   m_UseLimits: 1
   m_TranslationLimits:
     m_LowerTranslation: -1
@@ -879,7 +877,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1347077790}
   m_GameObject: {fileID: 1263915165}
-  m_Mass: .100000001
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -990,6 +988,10 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 862392865}
+    - target: {fileID: 11463788, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
+      propertyPath: key
+      value: j
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 737f6cada36644118a52b7a3966be3f9, type: 2}
   m_RootGameObject: {fileID: 1263915165}
