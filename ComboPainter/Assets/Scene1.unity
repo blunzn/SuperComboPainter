@@ -527,6 +527,7 @@ GameObject:
   - 50: {fileID: 862392865}
   - 61: {fileID: 862392864}
   - 233: {fileID: 862392863}
+  - 114: {fileID: 862392869}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -623,6 +624,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &862392869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 862392862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d6e7d63b56a4c0ca2f2e8f6f06b61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1088336830
 GameObject:
   m_ObjectHideFlags: 0

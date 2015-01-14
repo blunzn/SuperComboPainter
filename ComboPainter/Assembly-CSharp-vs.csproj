@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Jump.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Resources\Prefabs\PostureKeeper.cs" />
      <Compile Include="Assets\Walk.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>/Users/peter/Documents/brokenrules/SuperComboPainter/ComboPainter/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
