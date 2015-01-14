@@ -5,17 +5,32 @@ public class PaintArea : MonoBehaviour {
 
 	private Sprite sprite;
 
+	private Color[] original;
+
 	// Use this for initialization
 	void Start () {
 
 		sprite = GetComponent<SpriteRenderer>().sprite;
-
+		original = sprite.texture.GetPixels();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		sprite.texture.Apply();
+
+		if (Input.GetKeyDown(KeyCode.Backspace))
+			clear();
+	}
+
+	void OnApplicationQuit() {
+
+		clear();
+	}
+
+	public void clear() {
+
+		sprite.texture.SetPixels(original);
 	}
 
 	public void paint(Brush brush) {
