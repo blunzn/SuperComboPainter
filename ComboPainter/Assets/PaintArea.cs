@@ -18,10 +18,13 @@ public class PaintArea : MonoBehaviour {
 		sprite.texture.Apply();
 	}
 
-	public void paintAt(Vector3 worldPoint) {
+	public void paint(Brush brush) {
 
-		Vector2 position = pixelCoordinates(worldPoint);
-		sprite.texture.SetPixel((int)position.x, (int)position.y, Color.red);
+		Vector2 position = pixelCoordinates(brush.transform.position);
+
+//		sprite.texture.SetPixels
+		sprite.texture.SetPixels((int)position.x, (int)position.y, brush.size, brush.size, brush.colors);
+//		sprite.texture.SetPixels((int)position.x, (int)position.y, Color.red);
 	}
 
 	Vector2 pixelCoordinates(Vector3 worldCoordinates) {
