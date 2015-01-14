@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Canvas : MonoBehaviour {
+public class PaintArea : MonoBehaviour {
 
 	private Sprite sprite;
-	private Transform brush;
 
 	// Use this for initialization
 	void Start () {
 
 		sprite = GetComponent<SpriteRenderer>().sprite;
-		brush = GameObject.Find("Torso").transform.FindChild("arms_hand").transform;
 
 	}
 	
@@ -28,7 +26,7 @@ public class Canvas : MonoBehaviour {
 
 	Vector2 pixelCoordinates(Vector3 worldCoordinates) {
 
-		Vector3 localPoint = transform.InverseTransformPoint(brush.position);
+		Vector3 localPoint = transform.InverseTransformPoint(worldCoordinates);
 		Vector2 position = (Vector2)localPoint;
 
 		Vector2 normCoord = (position - (Vector2)sprite.bounds.min);
