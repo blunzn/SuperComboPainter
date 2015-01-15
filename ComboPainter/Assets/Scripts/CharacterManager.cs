@@ -63,4 +63,19 @@ public class CharacterManager : MonoBehaviour {
 
 //		allCharacters[0].transform.position.
 	}
+
+	public GameObject bottom()
+	{
+				return allCharacters [0];
+	}
+	
+	public GameObject middle()
+	{
+		return allCharacters [1];
+	}
+	
+	public GameObject top()
+	{
+		return allCharacters [2];
+	}
 }
