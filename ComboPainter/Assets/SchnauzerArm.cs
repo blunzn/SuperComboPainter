@@ -14,9 +14,9 @@ public class SchnauzerArm : MonoBehaviour {
 	void Update () {
 		HingeJoint2D j = gameObject.GetComponent<HingeJoint2D> ();
 		JointMotor2D m = j.motor;
-		if (Input.GetKey ("up"))
+		if (Input.GetAxis ("moveArm") > 0)
 			m.motorSpeed = speed;
-		else if (Input.GetKey ("down"))
+		else if (Input.GetAxis ("moveArm") < 0)
 			m.motorSpeed = -speed;
 		else
 			m.motorSpeed = 0;
