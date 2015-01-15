@@ -942,6 +942,7 @@ GameObject:
   - 233: {fileID: 816628680}
   - 61: {fileID: 816628679}
   - 233: {fileID: 816628678}
+  - 114: {fileID: 816628683}
   m_Layer: 0
   m_Name: lowerleg
   m_TagString: Untagged
@@ -970,9 +971,9 @@ HingeJoint2D:
   m_GameObject: {fileID: 816628676}
   m_Enabled: 1
   m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 611077185}
+  m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: .119978249, y: -.101092778}
-  m_ConnectedAnchor: {x: -.704021692, y: 1.09190714}
+  m_ConnectedAnchor: {x: -.52902174, y: .0679071322}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1052,6 +1053,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92a51a7093da042409f0ce3afc0ac1c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &816628683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816628676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248a72df07cc6470490b4808bd56e97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentName: marius
 --- !u!1 &828000015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,14 +1753,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 23323576, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 611077185}
-    - target: {fileID: 23323570, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 611077185}
     - target: {fileID: 123558, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
       propertyPath: m_Name
       value: Torso
@@ -1756,6 +1761,22 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 611077185}
+    - target: {fileID: 23323570, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: -.52902174
+      objectReference: {fileID: 0}
+    - target: {fileID: 23323570, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: .0679071322
+      objectReference: {fileID: 0}
+    - target: {fileID: 23323576, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: .524830699
+      objectReference: {fileID: 0}
+    - target: {fileID: 23323576, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: .0742114261
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd37c96b1a16d4e62b0831ca81053da6, type: 2}
   m_RootGameObject: {fileID: 862392862}
@@ -2215,6 +2236,7 @@ GameObject:
   - 233: {fileID: 1862074985}
   - 61: {fileID: 1862074984}
   - 233: {fileID: 1862074988}
+  - 114: {fileID: 1862074989}
   m_Layer: 0
   m_Name: lowerleg
   m_TagString: Untagged
@@ -2314,9 +2336,9 @@ HingeJoint2D:
   m_GameObject: {fileID: 1862074982}
   m_Enabled: 1
   m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 611077185}
+  m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: -.115169346, y: -.106788509}
-  m_ConnectedAnchor: {x: .349830687, y: 1.09321141}
+  m_ConnectedAnchor: {x: .524830699, y: .0742114261}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2325,6 +2347,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &1862074989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862074982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248a72df07cc6470490b4808bd56e97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentName: marius
 --- !u!1 &1875833839
 GameObject:
   m_ObjectHideFlags: 0
