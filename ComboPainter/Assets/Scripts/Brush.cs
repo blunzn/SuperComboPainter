@@ -5,24 +5,25 @@ public class Brush : MonoBehaviour {
 
 	public int width = 21;
 	public int height = 21;
-	public Color brushColor = Color.red;
-	
-	public string keyGreen = "1";
-	public string keyBlue = "2";
-	
+	public Color[] brushColors = {Color.red, Color.green, Color.blue};
 	public Texture2D texture;
+	public string keyRed = "1";
+	public string keyGreen = "2";
+	public string keyBlue = "3";
 
 	private PaintArea canvas;
 	private Color[] brush;
-	
-	private bool doPaint;
 
+	private Color brushColor;
+	private int brushIndex;
+
+	private bool doPaint;
 	
 	public Color[] colors {
 		get { return brush; }
 	}
 
-	public Color color {
+	private Color color {
 		get { return brushColor; }
 		set {
 			brushColor = value;
@@ -55,8 +56,7 @@ public class Brush : MonoBehaviour {
 						brush[index] = color;
 					}
 				}
-	}
-
+			}
 		}
 	}
 
@@ -64,22 +64,25 @@ public class Brush : MonoBehaviour {
 	void Start () {
 
 		canvas = GameObject.Find("Canvas").GetComponent<PaintArea>();
-		color = brushColor;
+//		color = brushColors[0];
 		doPaint = false;
+		brushIndex = -1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(keyGreen))
-			color = Color.green;
-		if (Input.GetKeyDown(keyBlue))
-			color = Color.blue;
+		bool color1 = Input.GetAxis("color1") > 0;
+		bool color2 = Input.GetAxis("color2") > 0;
+		bool color3 = Input.GetAxis("color3") > 0;
 
-		if (Input.GetKey(keyGreen) || Input.GetKey(keyBlue))
-			doPaint = true;
-		else
-			doPaint = false;
+		int index = (color1) ? 0 : (color2) ? 1 : (color3) ? 2 : brushIndex;
+		print (index);
+		if (brushIndex != index)
+			color = brushColors[index];
+		brushIndex = index;
+
+		doPaint = color1 || color2 || color3;
 
 		if (doPaint)
 			canvas.paint(this);
