@@ -24,12 +24,20 @@ public class Scream : MonoBehaviour {
 		headIdle.enabled = !doScream;
 		headScream.enabled = doScream;
 
+		int screamIndex = 0;
+		if (Input.GetButton("color1"))
+			screamIndex = 0;
+		else if (Input.GetButton("color2"))
+			screamIndex = 1;
+		else if (Input.GetButton("color3"))
+			screamIndex = 2;
+
 		if (currentSound == null && doScream)
 		{
 			AudioSource[] sources = transform.GetComponentsInChildren<AudioSource>();
 
-			int index = Random.Range(0, sources.Length);
-			currentSound = sources[index];
+//			int index = Random.Range(0, sources.Length);
+			currentSound = sources[screamIndex];
 			currentSound.Play();
 		}
 		else if (currentSound != null && !doScream)
