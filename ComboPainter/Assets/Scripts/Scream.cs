@@ -16,7 +16,7 @@ public class Scream : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		bool doScream = Input.GetAxis ("green") > 0 || Input.GetAxis ("blue") > 0 || Input.GetAxis ("red") > 0;
+		bool doScream = Input.GetAxis ("color1") > 0 || Input.GetAxis ("color2") > 0 || Input.GetAxis ("color3") > 0;
 		headIdle.enabled = !doScream;
 		headScream.enabled = doScream;
 	}
