@@ -190,7 +190,7 @@ GameObject:
   - 233: {fileID: 23323570}
   - 114: {fileID: 11401036}
   - 114: {fileID: 11401032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lowerleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - 233: {fileID: 23323572}
   - 61: {fileID: 6123574}
   - 114: {fileID: 11401030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: upperleg right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - 233: {fileID: 23323576}
   - 114: {fileID: 11401038}
   - 114: {fileID: 11401028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lowerleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .100000001, y: 1.16999996, z: 0}
+  m_LocalPosition: {x: .0559055805, y: .981625736, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423550}
@@ -529,7 +529,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123568}
-  m_Mass: 1
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -544,7 +544,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123570}
-  m_Mass: 1
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -559,7 +559,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123572}
-  m_Mass: 1
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -574,7 +574,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123574}
-  m_Mass: 1
+  m_Mass: .00999999978
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -1013,8 +1013,8 @@ HingeJoint2D:
   m_Enabled: 1
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 5023562}
-  m_Anchor: {x: -.485680699, y: .0275198221}
-  m_ConnectedAnchor: {x: .542128444, y: .0487203263}
+  m_Anchor: {x: -.619741321, y: .002769385}
+  m_ConnectedAnchor: {x: .663083494, y: -.0141663542}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
