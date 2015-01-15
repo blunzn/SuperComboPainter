@@ -1860,9 +1860,9 @@ MonoBehaviour:
   width: 21
   height: 21
   brushColors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: .0632569268, g: .860294104, b: .46452409, a: 1}
+  - {r: 1, g: .724137902, b: 0, a: 1}
+  - {r: .295955896, g: .563514233, b: .875, a: 1}
   texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
   keyRed: 1
   keyGreen: 2
