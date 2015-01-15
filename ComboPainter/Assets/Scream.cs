@@ -13,7 +13,7 @@ public class Scream : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey("1"))
-			setColor (Color.gree
+//		if (Input.GetKey ("1"))
+//						setColor (Color.green);
 	}
 }
