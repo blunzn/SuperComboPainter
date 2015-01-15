@@ -9,6 +9,8 @@ public class Walk : MonoBehaviour {
 	private SpriteRenderer idle;
 	private SpriteRenderer walk;
 
+	public bool flipRoot = false;
+
 	private bool hasAnimations;
 
 	// Use this for initialization
@@ -60,11 +62,14 @@ public class Walk : MonoBehaviour {
 				idle.enabled = true;
 			}
 			
-			
-			walk.transform.localScale = scale;
-			idle.transform.localScale = scale;
+			if(!flipRoot)
+			{
+				walk.transform.localScale = scale;
+				idle.transform.localScale = scale;
+
+			}
 		}
-//		else
-//			transform.localScale = scale;
+		if (flipRoot)
+			transform.localScale = scale;
 	}
 }
