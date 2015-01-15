@@ -64,7 +64,7 @@ public class Brush : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		canvas = GameObject.Find("Canvas").GetComponent<PaintArea>();
+		canvas = GameObject.Find("PaintCanvas").GetComponent<PaintArea>();
 //		color = brushColors[0];
 		doPaint = false;
 		brushIndex = -1;

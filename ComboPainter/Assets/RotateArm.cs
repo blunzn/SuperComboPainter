@@ -16,8 +16,11 @@ public class RotateArm : MonoBehaviour {
 	void Update () {
 		HingeJoint2D j = gameObject.GetComponent<HingeJoint2D> ();
 		JointMotor2D m = j.motor;
+		
+		CharacterManager manager = GameObject.Find ("GameController").GetComponent<CharacterManager> ();
+
 		if (Input.GetAxis ("moveArm") * inputAxisFlip > 0) {
-						m.motorSpeed = initialMotorSpeed;
+			m.motorSpeed = initialMotorSpeed/(float)(manager.finehide+1);
 						m.maxMotorTorque = maxForce;
 				} else {
 						m.motorSpeed = 0;
