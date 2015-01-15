@@ -572,7 +572,7 @@ GameObject:
   - 222: {fileID: 1174157498}
   - 114: {fileID: 1174157497}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,6 +681,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1323908359}
   - 82: {fileID: 1323908358}
+  - 114: {fileID: 1323908360}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -758,6 +759,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1323908360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323908357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ade2f111a504906900bca494cd3247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1393063086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +1014,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1508913909}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 0
   m_Camera: {fileID: 0}

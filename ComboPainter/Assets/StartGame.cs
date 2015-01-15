@@ -13,8 +13,9 @@ public class StartGame : MonoBehaviour {
 	void Update () {
 		if (Input.GetAxis ("startGame") > 0) {
 						manager.gameStarted = true;
-			GetComponent<FadeOutImage>().startFade();
-			transform.parent.Find("Background").gameObject.GetComponent<FadeOutImage>().startFade();
+			transform.root.gameObject.SetActive(false);
+//			GetComponent<FadeOutImage>().startFade();
+//			transform.parent.Find("Background").gameObject.GetComponent<FadeOutImage>().startFade();
 
 				}
 	}
