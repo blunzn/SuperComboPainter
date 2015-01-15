@@ -82,11 +82,11 @@ public class Brush : MonoBehaviour {
 		if (manager.finehide != mipLevel)
 		{
 			mipLevel = manager.finehide;
-			color = brushColors[brushIndex];
+			color = brushColors[Mathf.Max(brushIndex,0)];
 		}
 
 		int index = (color1) ? 0 : (color2) ? 1 : (color3) ? 2 : brushIndex;
-		print (index);
+//		print (index);
 		if (brushIndex != index)
 			color = brushColors[index];
 		brushIndex = index;
