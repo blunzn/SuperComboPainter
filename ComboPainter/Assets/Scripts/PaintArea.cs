@@ -49,8 +49,8 @@ public class PaintArea : MonoBehaviour {
 	public void paint(Brush brush) {
 
 		Vector2 position = pixelCoordinates(brush.transform.position);
-		int x = (int)position.x;
-		int y = (int)position.y;
+		int x = (int)position.x - (brush.width / 2) + 1;
+		int y = (int)position.y - (brush.height / 2) + 1;
 
 		Color[] canvasColors = sprite.texture.GetPixels(x, y, brush.width, brush.height);
 		Color[] brushColors = brush.colors;

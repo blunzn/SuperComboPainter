@@ -301,10 +301,10 @@ MonoBehaviour:
   width: 21
   height: 21
   brushColors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
+  - {r: .925490201, g: 0, b: .549019635, a: 1}
+  - {r: .717647076, g: .925490201, b: 0, a: 1}
+  - {r: 0, g: .870588243, b: 1, a: 1}
+  texture: {fileID: 2800000, guid: 80924fbeb4e93430097f8ad5b36d3f2b, type: 3}
   keyRed: 1
   keyGreen: 2
   keyBlue: 3
@@ -322,10 +322,10 @@ MonoBehaviour:
   width: 21
   height: 21
   brushColors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
+  - {r: .717647076, g: .925490201, b: 0, a: 1}
+  - {r: 0, g: .870588243, b: 1, a: 1}
+  - {r: .925490201, g: 0, b: .549019635, a: 1}
+  texture: {fileID: 2800000, guid: 80924fbeb4e93430097f8ad5b36d3f2b, type: 3}
   keyRed: 1
   keyGreen: 2
   keyBlue: 3
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90453e64522084349843f4045b7da43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 90
+  speed: 140
 --- !u!114 &11424698
 MonoBehaviour:
   m_ObjectHideFlags: 1
