@@ -434,7 +434,7 @@ HingeJoint2D:
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: -40
-    m_UpperAngle: 40
+    m_UpperAngle: 60
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
