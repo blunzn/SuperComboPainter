@@ -5,16 +5,18 @@ public class Brush : MonoBehaviour {
 
 	public int width = 21;
 	public int height = 21;
-	public Color brushColor = Color.red;
-	
-	public string keyGreen = "1";
-	public string keyBlue = "2";
-	
+	public Color[] brushColors = {Color.red, Color.green, Color.blue};
 	public Texture2D texture;
+	public string keyRed = "1";
+	public string keyGreen = "2";
+	public string keyBlue = "3";
 
 	private PaintArea canvas;
 	private Color[] brush;
-	
+
+	private Color brushColor;
+	private int brushIndex;
+
 	private bool doPaint;
 
 	
@@ -64,19 +66,22 @@ public class Brush : MonoBehaviour {
 	void Start () {
 
 		canvas = GameObject.Find("Canvas").GetComponent<PaintArea>();
-		color = brushColor;
+//		color = brushColors[0];
 		doPaint = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(keyGreen))
-			color = Color.green;
+		if (Input.GetKeyDown(keyRed))
+			color = brushColors[0];
 		if (Input.GetKeyDown(keyBlue))
-			color = Color.blue;
+			color = brushColors[1];
+		if (Input.GetKeyDown(keyGreen))
+			color = brushColors[2];
 
-		if (Input.GetKey(keyGreen) || Input.GetKey(keyBlue))
+
+		if (Input.GetKey(keyRed) || Input.GetKey(keyGreen) || Input.GetKey(keyBlue))
 			doPaint = true;
 		else
 			doPaint = false;
