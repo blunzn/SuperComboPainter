@@ -3,8 +3,11 @@ using System.Collections;
 
 public class Brush : MonoBehaviour {
 
-	public int size;
+	public int width = 21;
+	public int height = 21;
 	public Color color;
+
+	public Texture2D texture;
 
 	private PaintArea canvas;
 	private Color[] brush;
@@ -18,21 +21,35 @@ public class Brush : MonoBehaviour {
 
 		canvas = GameObject.Find("Canvas").GetComponent<PaintArea>();
 
-		int width = size;
-		int height = size;
-		brush = new Color[width * height];
-		Vector2 centerOffset;
-		for (int x = 0; x < width; x++)
+		if (texture != null)
 		{
-			for (int y = 0; y < height; y++)
-			{
-				int index = x + y*width;
-				centerOffset.x = (width/2 + 1) - x;
-				centerOffset.y = (height/2 + 1) - y;
+			brush = texture.GetPixels();
+			width = texture.width;
+			height = texture.height;
 
-				Color brushColor = color;
-				brushColor.a = (centerOffset.magnitude < width/2) ? 1 : 0;
-				brush[index] = brushColor;
+			for (int i = 0; i < brush.Length; i++)
+			{
+				float alpha = brush[i].a;
+				brush[i] = color;
+				brush[i].a = alpha;
+			}
+		}
+		else
+		{
+			brush = new Color[width * height];
+			Vector2 centerOffset;
+			for (int x = 0; x < width; x++)
+			{
+				for (int y = 0; y < height; y++)
+				{
+					int index = x + y*width;
+					centerOffset.x = (width/2 + 1) - x;
+					centerOffset.y = (height/2 + 1) - y;
+
+					Color brushColor = color;
+					brushColor.a = (centerOffset.magnitude < width/2) ? 1 : 0;
+					brush[index] = brushColor;
+				}
 			}
 		}
 	}

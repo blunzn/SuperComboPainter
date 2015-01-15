@@ -36,10 +36,19 @@ public class PaintArea : MonoBehaviour {
 	public void paint(Brush brush) {
 
 		Vector2 position = pixelCoordinates(brush.transform.position);
+		int x = (int)position.x;
+		int y = (int)position.y;
 
-//		sprite.texture.SetPixels
-		sprite.texture.SetPixels((int)position.x, (int)position.y, brush.size, brush.size, brush.colors);
-//		sprite.texture.SetPixels((int)position.x, (int)position.y, Color.red);
+		Color[] canvasColors = sprite.texture.GetPixels(x, y, brush.width, brush.height);
+		Color[] brushColors = brush.colors;
+		Color[] colors = new Color[brush.colors.Length];
+
+		for (int i = 0; i < colors.Length; i++) {
+			colors[i] = Color.Lerp(canvasColors[i], brushColors[i], brushColors[i].a );
+			colors[i].a = 1f;
+		}
+
+		sprite.texture.SetPixels(x, y, brush.width, brush.height, colors);
 	}
 
 	Vector2 pixelCoordinates(Vector3 worldCoordinates) {
