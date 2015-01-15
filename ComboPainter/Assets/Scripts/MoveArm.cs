@@ -15,10 +15,13 @@ public class MoveArm : MonoBehaviour {
 	{
 		SliderJoint2D slider = gameObject.GetComponent<SliderJoint2D>();
 		JointMotor2D motor = slider.motor;
+		
+		CharacterManager manager = GameObject.Find ("GameController").GetComponent<CharacterManager> ();
+
 		if (Input.GetKey(up))
-			motor.motorSpeed = -speed;
+			motor.motorSpeed = -speed/(float)(manager.finehide+1);
 		else if (Input.GetKey(down))
-			motor.motorSpeed = speed;
+			motor.motorSpeed = speed/(float)(manager.finehide+1);
 		else
 			motor.motorSpeed = 0;
 			//slider.useMotor = true;
