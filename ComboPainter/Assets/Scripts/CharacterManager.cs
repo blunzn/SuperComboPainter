@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BuildCharacter : MonoBehaviour {
+public class CharacterManager : MonoBehaviour {
 	Object[] allBottom;
 	Object[] allMiddle;
 	Object[] allTop;
