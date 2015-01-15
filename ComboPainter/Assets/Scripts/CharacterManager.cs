@@ -13,6 +13,8 @@ public class CharacterManager : MonoBehaviour {
 
 	public int finehide = 0;
 
+	public bool gameStarted;
+
 	// Use this for initialization
 	void Start () 
 	{
