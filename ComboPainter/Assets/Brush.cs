@@ -5,7 +5,7 @@ public class Brush : MonoBehaviour {
 
 	public int width = 21;
 	public int height = 21;
-	public Color color;
+	public Color color = Color.red;
 
 	public Texture2D texture;
 
@@ -29,9 +29,7 @@ public class Brush : MonoBehaviour {
 
 			for (int i = 0; i < brush.Length; i++)
 			{
-				float alpha = brush[i].a;
-				brush[i] = color;
-				brush[i].a = alpha;
+				brush[i] *= color;
 			}
 		}
 		else
