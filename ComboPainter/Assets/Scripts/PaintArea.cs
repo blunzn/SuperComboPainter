@@ -52,6 +52,9 @@ public class PaintArea : MonoBehaviour {
 		int x = (int)position.x - (brush.width / 2) + 1;
 		int y = (int)position.y - (brush.height / 2) + 1;
 
+		if (x < 0 || y < 0 || x+brush.width >= sprite.texture.width || y+brush.height >= sprite.texture.height)
+			return;
+
 		Color[] canvasColors = sprite.texture.GetPixels(x, y, brush.width, brush.height);
 		Color[] brushColors = brush.colors;
 		Color[] colors = new Color[brush.colors.Length];
