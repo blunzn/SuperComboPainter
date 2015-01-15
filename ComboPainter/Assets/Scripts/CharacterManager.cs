@@ -64,9 +64,6 @@ public class CharacterManager : MonoBehaviour {
 			GameObject.Destroy(p);
 		}
 
-		Texture2D tempTex = allBackgrounds [Random.Range (0, allBackgrounds.Length)] as Texture2D;
-		GameObject.Find ("Canvas").GetComponent<SpriteRenderer> ().sprite = Sprite.Create(tempTex, new Rect(0,0,tempTex.width,tempTex.height), new Vector2(0,0));
-
 		GameObject temp = allBottom [Random.Range (0, allBottom.Length)] as GameObject;
 		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;
 
