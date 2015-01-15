@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edb4ae39b6fa47269f422dc73c42e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 21
-  color: {r: .503701806, g: 0, b: .948529422, a: 0}
+  width: 21
+  height: 21
+  brushColor: {r: .572413921, g: 0, b: 1, a: 1}
+  texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
 --- !u!114 &11463788
 MonoBehaviour:
   m_ObjectHideFlags: 1
