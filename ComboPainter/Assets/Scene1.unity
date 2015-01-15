@@ -214,7 +214,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 45
     m_UpperAngle: 220
@@ -493,7 +493,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 23346490, guid: d8ed8586bbdde4f43aa471f401d022a0, type: 2}
       propertyPath: m_UseLimits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 23346490, guid: d8ed8586bbdde4f43aa471f401d022a0, type: 2}
       propertyPath: m_AngleLimits.m_UpperAngle
