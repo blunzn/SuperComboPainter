@@ -59,7 +59,12 @@ public class Walk : MonoBehaviour {
 				walk.enabled = false;
 				idle.enabled = true;
 			}
-
-				}
+			
+			
+			walk.transform.localScale = scale;
+			idle.transform.localScale = scale;
+		}
+		else
+			transform.localScale = scale;
 	}
 }
