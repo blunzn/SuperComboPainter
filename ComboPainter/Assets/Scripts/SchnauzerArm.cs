@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SchnauzerArm : MonoBehaviour {
 
-	public float speed = 2f;
+	public float speed = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -16,9 +16,9 @@ public class SchnauzerArm : MonoBehaviour {
 		HingeJoint2D j = gameObject.GetComponent<HingeJoint2D> ();
 		JointMotor2D m = j.motor;
 
-		if (Input.GetKey ("up"))
+		if (Input.GetAxis ("moveArm") > 0)
 			m.motorSpeed = speed / (float)(manager.finehide+1);
-		else if (Input.GetKey ("down"))
+		else if (Input.GetAxis ("moveArm") < 0)
 			m.motorSpeed = -speed / (float)(manager.finehide+1);
 		else
 			m.motorSpeed = 0;
