@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Brush : MonoBehaviour {
@@ -6,11 +6,17 @@ public class Brush : MonoBehaviour {
 	public int width = 21;
 	public int height = 21;
 	public Color brushColor = Color.red;
-
+	
+	public string keyGreen = "1";
+	public string keyBlue = "2";
+	
 	public Texture2D texture;
 
 	private PaintArea canvas;
 	private Color[] brush;
+	
+	private bool doPaint;
+
 	
 	public Color[] colors {
 		get { return brush; }
@@ -26,7 +32,7 @@ public class Brush : MonoBehaviour {
 				brush = texture.GetPixels();
 				width = texture.width;
 				height = texture.height;
-				
+
 				for (int i = 0; i < brush.Length; i++)
 				{
 					brush[i] *= brushColor;
@@ -49,7 +55,7 @@ public class Brush : MonoBehaviour {
 						brush[index] = color;
 					}
 				}
-			}
+	}
 
 		}
 	}
@@ -59,12 +65,23 @@ public class Brush : MonoBehaviour {
 
 		canvas = GameObject.Find("Canvas").GetComponent<PaintArea>();
 		color = brushColor;
-
+		doPaint = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		canvas.paint(this);
+		if (Input.GetKeyDown(keyGreen))
+			color = Color.green;
+		if (Input.GetKeyDown(keyBlue))
+			color = Color.blue;
+
+		if (Input.GetKey(keyGreen) || Input.GetKey(keyBlue))
+			doPaint = true;
+		else
+			doPaint = false;
+
+		if (doPaint)
+			canvas.paint(this);
 	}
 }
