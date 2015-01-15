@@ -32,14 +32,22 @@ public class Walk : MonoBehaviour {
 	void Update () {
 	
 		float walkDirection = Input.GetAxis("walk");
+		
+		Vector3 scale = Vector3.one;
 
-		if (walkDirection > 0 && rigidbody2D.velocity.x < maxSpeed) {
-						rigidbody2D.AddForce (Vector2.right * acceleration);
-				} else if (walkDirection < 0 && rigidbody2D.velocity.x > -maxSpeed) {
-			rigidbody2D.AddForce (Vector2.right * -acceleration);
+		if (walkDirection > 0) {
+			scale.x = 1;
+			if(rigidbody2D.velocity.x < maxSpeed)
+				rigidbody2D.AddForce (Vector2.right * acceleration);
+
+		} else if (walkDirection < 0) 
+		{
+			scale.x = -1;
+			if(rigidbody2D.velocity.x > -maxSpeed)
+				rigidbody2D.AddForce (Vector2.right * -acceleration);
+		}
 
 
-				}
 
 		if (hasAnimations) {
 			if (rigidbody2D.velocity.magnitude > 0.5) {
@@ -49,7 +57,12 @@ public class Walk : MonoBehaviour {
 				walk.enabled = false;
 				idle.enabled = true;
 			}
-
-				}
+			
+			
+			walk.transform.localScale = scale;
+			idle.transform.localScale = scale;
+		}
+//		else
+//			transform.localScale = scale;
 	}
 }
