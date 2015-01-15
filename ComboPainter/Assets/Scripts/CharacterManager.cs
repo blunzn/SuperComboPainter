@@ -14,7 +14,7 @@ public class CharacterManager : MonoBehaviour {
 	public int finehide = 0;
 
 	// Use this for initialization
-	void Awake () 
+	void Start () 
 	{
 		allBottom = Resources.LoadAll ("Prefabs/AllCharacter/Bottom");
 		allMiddle = Resources.LoadAll ("Prefabs/AllCharacter/Middle");
@@ -22,6 +22,7 @@ public class CharacterManager : MonoBehaviour {
 		allBackgrounds = Resources.LoadAll ("Sprites/backgrounds");
 
 		newBackground ();
+		newCharacter();
 //		allCharacters = new GameObject[3];
 	}
 	
