@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &179170
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479170}
+  - 82: {fileID: 8279174}
+  - 82: {fileID: 8279172}
+  - 82: {fileID: 8279170}
+  m_Layer: 8
+  m_Name: sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &183886
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,9 +43,6 @@ GameObject:
   - 4: {fileID: 483888}
   - 212: {fileID: 21283892}
   - 95: {fileID: 9583892}
-  - 82: {fileID: 8283894}
-  - 82: {fileID: 8283892}
-  - 82: {fileID: 8283890}
   m_Layer: 0
   m_Name: scream
   m_TagString: Untagged
@@ -90,6 +105,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &479170
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 483894}
+  m_RootOrder: 2
 --- !u!4 &483886
 Transform:
   m_ObjectHideFlags: 1
@@ -121,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.52249146, y: -1.41398406, z: 0}
+  m_LocalPosition: {x: -2.82675648, y: 2.80100918, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483894}
@@ -152,6 +179,7 @@ Transform:
   m_Children:
   - {fileID: 483892}
   - {fileID: 483888}
+  - {fileID: 479170}
   m_Father: {fileID: 483890}
   m_RootOrder: 0
 --- !u!50 &5083892
@@ -206,15 +234,15 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!82 &8283890
+--- !u!82 &8279170
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183888}
+  m_GameObject: {fileID: 179170}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d3c276b1c259a41838cf2191775869a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef598f2cea1cd41db95138fb790b573f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -264,15 +292,15 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!82 &8283892
+--- !u!82 &8279172
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183888}
+  m_GameObject: {fileID: 179170}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d3c276b1c259a41838cf2191775869a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef598f2cea1cd41db95138fb790b573f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -322,15 +350,15 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!82 &8283894
+--- !u!82 &8279174
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183888}
+  m_GameObject: {fileID: 179170}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d3c276b1c259a41838cf2191775869a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ef598f2cea1cd41db95138fb790b573f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
