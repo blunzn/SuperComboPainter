@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BuildCharacter : MonoBehaviour {
-	Object[] allLower;
+	Object[] allBottom;
 	Object[] allMiddle;
 	Object[] allTop;
 
@@ -11,7 +11,7 @@ public class BuildCharacter : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		allLower = Resources.LoadAll ("Prefabs/AllCharacter/Lower");
+		allBottom = Resources.LoadAll ("Prefabs/AllCharacter/Bottom");
 		allMiddle = Resources.LoadAll ("Prefabs/AllCharacter/Middle");
 		allTop = Resources.LoadAll ("Prefabs/AllCharacter/Top");
 
@@ -35,7 +35,7 @@ public class BuildCharacter : MonoBehaviour {
 			GameObject.Destroy(p);
 		}
 
-		GameObject temp = allLower [Random.Range (0, allLower.Length)] as GameObject;
+		GameObject temp = allBottom [Random.Range (0, allBottom.Length)] as GameObject;
 		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;
 
 		temp = allMiddle[Random.Range (0, allMiddle.Length)] as GameObject;
