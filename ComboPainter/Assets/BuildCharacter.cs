@@ -39,14 +39,28 @@ public class BuildCharacter : MonoBehaviour {
 		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;
 
 		temp = allMiddle[Random.Range (0, allMiddle.Length)] as GameObject;
-		Transform bottom = temp.transform.FindChild ("bottom");
-		Vector3 pos = bottom.position - bottom.localPosition;
 
-		allCharacters [1] = Instantiate (temp, pos , Quaternion.identity) as GameObject;
+//		Transform bottom = temp.transform.FindChild ("bottom");
+//		Vector3 pos = bottom.position - bottom.localPosition;
+
+		allCharacters [1] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
 		HingeJoint2D joint = allCharacters [1].GetComponent<HingeJoint2D> ();
 		joint.connectedBody = allCharacters [0].rigidbody2D;
 		joint.anchor = allCharacters [1].transform.FindChild ("bottom").localPosition;
 		joint.connectedAnchor = allCharacters [0].transform.FindChild ("top").localPosition;
+
+
+		temp = allTop[Random.Range (0, allTop.Length)] as GameObject;
+		
+		//		Transform bottom = temp.transform.FindChild ("bottom");
+		//		Vector3 pos = bottom.position - bottom.localPosition;
+		
+		allCharacters [2] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		joint = allCharacters [2].GetComponent<HingeJoint2D> ();
+		joint.connectedBody = allCharacters [1].rigidbody2D;
+		joint.anchor = allCharacters [2].transform.FindChild ("bottom").localPosition;
+		joint.connectedAnchor = allCharacters [1].transform.FindChild ("top").localPosition;
+
 //		allCharacters[0].transform.position.
 	}
 }
