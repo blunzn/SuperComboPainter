@@ -29,10 +29,10 @@ public class CharacterManager : MonoBehaviour {
 		if (Input.GetKeyDown ("b"))
 			newCharacter();
 
-		if (Input.GetKeyDown(KeyCode.Plus) && finehide < 2)
+		if (Input.GetKeyDown(KeyCode.LeftArrow) && finehide < 2)
 			finehide++;
 				
-		if (Input.GetKeyDown(KeyCode.Minus) && finehide > 0)
+		if (Input.GetKeyDown(KeyCode.RightArrow) && finehide > 0)
 			finehide--;
 	}
 
