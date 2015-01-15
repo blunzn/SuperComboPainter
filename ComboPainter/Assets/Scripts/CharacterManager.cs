@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour {
 	Object[] allBackgrounds;
 
 	public GameObject[] allCharacters;
+	public SpriteRenderer currentBg;
 
 	public int finehide = 0;
 
@@ -20,6 +21,7 @@ public class CharacterManager : MonoBehaviour {
 		allTop = Resources.LoadAll ("Prefabs/AllCharacter/Top");
 		allBackgrounds = Resources.LoadAll ("Sprites/backgrounds");
 
+		newBackground ();
 //		allCharacters = new GameObject[3];
 	}
 	
@@ -28,12 +30,28 @@ public class CharacterManager : MonoBehaviour {
 	{
 		if (Input.GetKeyDown ("b"))
 			newCharacter();
+		if (Input.GetKeyDown ("v"))
+			newBackground();
 
 		if (Input.GetKeyDown(KeyCode.LeftArrow) && finehide < 2)
 			finehide++;
 				
 		if (Input.GetKeyDown(KeyCode.RightArrow) && finehide > 0)
 			finehide--;
+	}
+	
+	void newBackground()
+	{
+		GameObject bg = GameObject.Find ("Canvas");
+		SpriteRenderer[] sp = bg.GetComponentsInChildren<SpriteRenderer> ();
+		int num = Random.Range (0, sp.Length);
+		for (int i = 0; i < sp.Length; ++i)
+		{
+			if (i == num)
+				bg.GetComponent<PaintArea>().background = sp[i].sprite;
+
+			sp[i].enabled = (i == num);
+		}
 	}
 
 	void newCharacter()
@@ -45,9 +63,6 @@ public class CharacterManager : MonoBehaviour {
 
 			GameObject.Destroy(p);
 		}
-
-		Texture2D tempTex = allBackgrounds [Random.Range (0, allBackgrounds.Length)] as Texture2D;
-		GameObject.Find ("Canvas").GetComponent<SpriteRenderer> ().sprite = Sprite.Create(tempTex, new Rect(0,0,tempTex.width,tempTex.height), new Vector2(0,0));
 
 		GameObject temp = allBottom [Random.Range (0, allBottom.Length)] as GameObject;
 		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;

@@ -10,12 +10,15 @@ public class PaintArea : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		sprite = GetComponent<SpriteRenderer>().sprite;
-		original = sprite.texture.GetPixels();
+//		sprite = GetComponent<SpriteRenderer>().sprite;
+//		original = sprite.texture.GetPixels();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (sprite == null)
+						return;
 
 		sprite.texture.Apply();
 
@@ -23,14 +26,24 @@ public class PaintArea : MonoBehaviour {
 			clear();
 	}
 
+	public Sprite background {
+				get { return sprite; }
+				set {
+						clear ();
+						sprite = value;
+						original = sprite.texture.GetPixels ();
+				}
+		}
+
+
 	void OnApplicationQuit() {
 
 		clear();
 	}
 
 	public void clear() {
-
-		sprite.texture.SetPixels(original);
+		if (sprite != null)
+			sprite.texture.SetPixels(original);
 	}
 
 	public void paint(Brush brush) {
