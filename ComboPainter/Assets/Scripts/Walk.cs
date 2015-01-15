@@ -47,8 +47,6 @@ public class Walk : MonoBehaviour {
 				rigidbody2D.AddForce (Vector2.right * -acceleration);
 		}
 
-		walk.transform.localScale = scale;
-		idle.transform.localScale = scale;
 
 
 		if (hasAnimations) {

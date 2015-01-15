@@ -6,16 +6,16 @@ public class CharacterManager : MonoBehaviour {
 	Object[] allMiddle;
 	Object[] allTop;
 
-	GameObject[] allCharacters;
+	public GameObject[] allCharacters;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
 		allBottom = Resources.LoadAll ("Prefabs/AllCharacter/Bottom");
 		allMiddle = Resources.LoadAll ("Prefabs/AllCharacter/Middle");
 		allTop = Resources.LoadAll ("Prefabs/AllCharacter/Top");
 
-		allCharacters = new GameObject[3];
+//		allCharacters = new GameObject[3];
 	}
 	
 	// Update is called once per frame
@@ -44,6 +44,11 @@ public class CharacterManager : MonoBehaviour {
 //		Vector3 pos = bottom.position - bottom.localPosition;
 
 		allCharacters [1] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		connectDecoJoints[] djs = allCharacters [1].GetComponentsInChildren<connectDecoJoints> ();
+		foreach (connectDecoJoints dj in djs)
+						dj.connect (); 
+
+		allCharacters [1].SetActive (true);
 		HingeJoint2D joint = allCharacters [1].GetComponent<HingeJoint2D> ();
 		joint.connectedBody = allCharacters [0].rigidbody2D;
 		joint.anchor = allCharacters [1].transform.FindChild ("bottom").localPosition;
@@ -64,9 +69,21 @@ public class CharacterManager : MonoBehaviour {
 //		allCharacters[0].transform.position.
 	}
 
+	public GameObject getPart(string part)
+	{
+		if (part == "bottom")
+			return bottom ();
+		else if (part == "middle")
+			return middle ();
+		else if (part == "top")
+			return top ();
+
+		return null;
+	}
+
 	public GameObject bottom()
 	{
-				return allCharacters [0];
+		return allCharacters [0];
 	}
 	
 	public GameObject middle()
