@@ -14,15 +14,7 @@ public class Walk : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		int walkDirection = 0;
-		if (Input.GetKey (KeyCode.A)) 
-		{
-			walkDirection = -1;
-				}
-		if (Input.GetKey (KeyCode.D)) {
-			
-			walkDirection += 1;
-				}
+		float walkDirection = Input.GetAxis("walk");
 
 		if (walkDirection > 0 && rigidbody2D.velocity.x < maxSpeed) {
 						rigidbody2D.AddForce (Vector2.right * acceleration);

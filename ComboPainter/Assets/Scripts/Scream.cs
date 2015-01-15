@@ -9,7 +9,7 @@ public class Scream : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Transform head = gameObject.transform.FindChild ("head");
+		Transform head = gameObject.transform;
 		headIdle = head.FindChild ("idle").gameObject.GetComponent<SpriteRenderer> ();
 		headScream = head.FindChild ("scream").gameObject.GetComponent<SpriteRenderer> ();
 	}
