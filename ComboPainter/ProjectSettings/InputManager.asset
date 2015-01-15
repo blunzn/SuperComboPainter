@@ -12,7 +12,7 @@ InputManager:
     negativeButton: 
     positiveButton: 1
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: '[1]'
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -28,7 +28,7 @@ InputManager:
     negativeButton: 
     positiveButton: 2
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: '[2]'
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -44,7 +44,7 @@ InputManager:
     negativeButton: 
     positiveButton: 3
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: '[3]'
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -59,8 +59,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: a
     positiveButton: d
-    altNegativeButton: 
-    altPositiveButton: 
+    altNegativeButton: '[4]'
+    altPositiveButton: '[6]'
     gravity: 500
     dead: .00100000005
     sensitivity: 500
@@ -75,8 +75,8 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: '-'
     positiveButton: +
-    altNegativeButton: 
-    altPositiveButton: 
+    altNegativeButton: '[-]'
+    altPositiveButton: '[+]'
     gravity: 500
     dead: .00100000005
     sensitivity: 500
@@ -92,10 +92,26 @@ InputManager:
     negativeButton: 
     positiveButton: 0
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: '[0]'
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: moveArm
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: down
+    positiveButton: up
+    altNegativeButton: '[5]'
+    altPositiveButton: '[8]'
+    gravity: 500
+    dead: .00100000005
+    sensitivity: 500
     snap: 0
     invert: 0
     type: 0

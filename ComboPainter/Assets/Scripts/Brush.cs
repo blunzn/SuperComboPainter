@@ -11,6 +11,7 @@ public class Brush : MonoBehaviour {
 	public string keyGreen = "2";
 	public string keyBlue = "3";
 
+	private int mipLevel = 0;
 	private PaintArea canvas;
 	private Color[] brush;
 
@@ -30,9 +31,9 @@ public class Brush : MonoBehaviour {
 
 			if (texture != null)
 			{
-				brush = texture.GetPixels();
-				width = texture.width;
-				height = texture.height;
+				brush = texture.GetPixels(mipLevel);
+				width = Mathf.Max(1,texture.width >> mipLevel);
+				height = Mathf.Max(1,texture.height >> mipLevel);
 
 				for (int i = 0; i < brush.Length; i++)
 				{
@@ -75,6 +76,14 @@ public class Brush : MonoBehaviour {
 		bool color1 = Input.GetAxis("color1") > 0;
 		bool color2 = Input.GetAxis("color2") > 0;
 		bool color3 = Input.GetAxis("color3") > 0;
+
+		CharacterManager manager = GameObject.Find ("GameController").GetComponent<CharacterManager> ();
+
+		if (manager.finehide != mipLevel)
+		{
+			mipLevel = manager.finehide;
+			color = brushColors[brushIndex];
+		}
 
 		int index = (color1) ? 0 : (color2) ? 1 : (color3) ? 2 : brushIndex;
 		print (index);

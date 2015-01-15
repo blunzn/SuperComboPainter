@@ -8,6 +8,8 @@ public class CharacterManager : MonoBehaviour {
 
 	public GameObject[] allCharacters;
 
+	public int finehide = 0;
+
 	// Use this for initialization
 	void Awake () 
 	{
@@ -22,7 +24,13 @@ public class CharacterManager : MonoBehaviour {
 	void Update () 
 	{
 		if (Input.GetKeyDown ("b"))
-						newCharacter ();
+			newCharacter();
+
+		if (Input.GetKeyDown(KeyCode.Plus) && finehide < 2)
+			finehide++;
+				
+		if (Input.GetKeyDown(KeyCode.Minus) && finehide > 0)
+			finehide--;
 	}
 
 	void newCharacter()
