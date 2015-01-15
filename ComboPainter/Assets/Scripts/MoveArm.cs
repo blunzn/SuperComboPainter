@@ -18,12 +18,7 @@ public class MoveArm : MonoBehaviour {
 		
 		CharacterManager manager = GameObject.Find ("GameController").GetComponent<CharacterManager> ();
 
-		if (Input.GetKey(up))
-			motor.motorSpeed = -speed/(float)(manager.finehide+1);
-		else if (Input.GetKey(down))
-			motor.motorSpeed = speed/(float)(manager.finehide+1);
-		else
-			motor.motorSpeed = 0;
+		motor.motorSpeed = -Input.GetAxis("moveArm") * speed/(float)(manager.finehide+1);
 			//slider.useMotor = true;
 //				} else if (Input.GetKey (KeyCode.DownArrow)) {
 //			
