@@ -54,7 +54,6 @@ public class CharacterManager : MonoBehaviour {
 		joint.anchor = allCharacters [1].transform.FindChild ("bottom").localPosition;
 		joint.connectedAnchor = allCharacters [0].transform.FindChild ("top").localPosition;
 
-
 		temp = allTop[Random.Range (0, allTop.Length)] as GameObject;
 		
 		//		Transform bottom = temp.transform.FindChild ("bottom");
