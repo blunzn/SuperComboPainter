@@ -304,7 +304,7 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
   - {r: 0, g: 0, b: 1, a: 1}
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
   keyRed: 1
   keyGreen: 2
   keyBlue: 3
@@ -325,7 +325,7 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
   - {r: 0, g: 0, b: 1, a: 1}
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
   keyRed: 1
   keyGreen: 2
   keyBlue: 3
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 124704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae7a6e32908f44fe2bd592818996508b, type: 3}
+  m_Script: {fileID: 11500000, guid: 90453e64522084349843f4045b7da43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 90
