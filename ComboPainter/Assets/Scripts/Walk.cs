@@ -34,16 +34,18 @@ public class Walk : MonoBehaviour {
 		float walkDirection = Input.GetAxis("walk");
 		
 		Vector3 scale = Vector3.one;
+		
+		CharacterManager manager = GameObject.Find("GameController").GetComponent<CharacterManager> ();
 
 		if (walkDirection > 0) {
 			scale.x = 1;
-			if(rigidbody2D.velocity.x < maxSpeed)
+			if(rigidbody2D.velocity.x < maxSpeed/(float)(manager.finehide+1))
 				rigidbody2D.AddForce (Vector2.right * acceleration);
 
 		} else if (walkDirection < 0) 
 		{
 			scale.x = -1;
-			if(rigidbody2D.velocity.x > -maxSpeed)
+			if(rigidbody2D.velocity.x > -maxSpeed/(float)(manager.finehide+1))
 				rigidbody2D.AddForce (Vector2.right * -acceleration);
 		}
 
