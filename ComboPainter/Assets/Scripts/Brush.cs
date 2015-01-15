@@ -86,7 +86,7 @@ public class Brush : MonoBehaviour {
 		}
 
 		int index = (color1) ? 0 : (color2) ? 1 : (color3) ? 2 : brushIndex;
-		print (index);
+//		print (index);
 		if (brushIndex != index)
 			color = brushColors[index];
 		brushIndex = index;
