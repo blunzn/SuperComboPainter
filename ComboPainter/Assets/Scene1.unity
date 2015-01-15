@@ -1221,6 +1221,7 @@ GameObject:
   - 61: {fileID: 1370138693}
   - 233: {fileID: 1370138692}
   - 114: {fileID: 1370138698}
+  - 114: {fileID: 1370138695}
   m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
@@ -1276,6 +1277,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1370138695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370138691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ad3ad3c85e74ae08d7cd19df347f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1370138697
 Transform:
   m_ObjectHideFlags: 0
@@ -1696,10 +1708,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edb4ae39b6fa47269f422dc73c42e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 21
-  color: {r: .503701806, g: 0, b: .948529422, a: 0}
+  width: 21
+  height: 21
+  brushColor: {r: .572413921, g: 0, b: 1, a: 1}
   keyGreen: 1
   keyBlue: 2
+  texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
 --- !u!1 &1745223805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,7 +1868,7 @@ GameObject:
   - 61: {fileID: 1931823074}
   - 233: {fileID: 1931823073}
   m_Layer: 8
-  m_Name: headhead
+  m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
