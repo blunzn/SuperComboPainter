@@ -6,17 +6,25 @@ public class CharacterManager : MonoBehaviour {
 	Object[] allMiddle;
 	Object[] allTop;
 
+	Object[] allBackgrounds;
+
 	public GameObject[] allCharacters;
+	public SpriteRenderer currentBg;
 
 	public int finehide = 0;
 
+	public bool gameStarted;
+
 	// Use this for initialization
-	void Awake () 
+	void Start () 
 	{
 		allBottom = Resources.LoadAll ("Prefabs/AllCharacter/Bottom");
 		allMiddle = Resources.LoadAll ("Prefabs/AllCharacter/Middle");
 		allTop = Resources.LoadAll ("Prefabs/AllCharacter/Top");
+		allBackgrounds = Resources.LoadAll ("Sprites/backgrounds");
 
+		newBackground ();
+		newCharacter();
 //		allCharacters = new GameObject[3];
 	}
 	
@@ -25,12 +33,28 @@ public class CharacterManager : MonoBehaviour {
 	{
 		if (Input.GetKeyDown ("b"))
 			newCharacter();
+		if (Input.GetKeyDown ("v"))
+			newBackground();
 
 		if (Input.GetKeyDown(KeyCode.LeftArrow) && finehide < 2)
 			finehide++;
 				
 		if (Input.GetKeyDown(KeyCode.RightArrow) && finehide > 0)
 			finehide--;
+	}
+	
+	void newBackground()
+	{
+		GameObject bg = GameObject.Find ("Canvas");
+		SpriteRenderer[] sp = bg.GetComponentsInChildren<SpriteRenderer> ();
+		int num = Random.Range (0, sp.Length);
+		for (int i = 0; i < sp.Length; ++i)
+		{
+			if (i == num)
+				bg.GetComponent<PaintArea>().background = sp[i].sprite;
+
+			sp[i].enabled = (i == num);
+		}
 	}
 
 	void newCharacter()
