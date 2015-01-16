@@ -1709,7 +1709,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentBg: {fileID: 0}
-  finehide: 0
+  finehide: 1
   gameStarted: 0
 --- !u!4 &1909515085
 Transform:

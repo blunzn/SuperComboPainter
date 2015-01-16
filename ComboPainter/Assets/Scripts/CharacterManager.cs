@@ -11,7 +11,7 @@ public class CharacterManager : MonoBehaviour {
 	public GameObject[] allCharacters;
 	public SpriteRenderer currentBg;
 
-	public int finehide = 0;
+	public int finehide = 1;
 
 	public bool gameStarted;
 
