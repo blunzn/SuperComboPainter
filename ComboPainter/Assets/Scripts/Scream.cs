@@ -21,8 +21,10 @@ public class Scream : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		bool doScream = Input.GetButton("color1") || Input.GetButton("color2") || Input.GetButton("color3");
-		headIdle.enabled = !doScream;
-		headScream.enabled = doScream;
+//		headIdle.enabled = !doScream;
+		headIdle.gameObject.SetActive (!doScream);
+		//		headScream.enabled = doScream;
+		headScream.gameObject.SetActive (doScream);
 
 		int screamIndex = 0;
 		if (Input.GetButton("color1"))
