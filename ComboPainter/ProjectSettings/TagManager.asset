@@ -41,7 +41,15 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
-  - name: Front
+  - name: Bottom
     userID: 1
     uniqueID: 2663959317
+    locked: 0
+  - name: Middle
+    userID: 2
+    uniqueID: 1646139287
+    locked: 0
+  - name: Top
+    userID: 3
+    uniqueID: 4205964801
     locked: 0
