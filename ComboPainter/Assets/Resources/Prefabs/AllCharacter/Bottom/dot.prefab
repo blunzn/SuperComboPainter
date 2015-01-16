@@ -127,7 +127,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78854871, y: .00630956888, z: 0}
+  m_LocalPosition: {x: -.644022346, y: .211443424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400094}
@@ -291,7 +291,7 @@ SliderJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: .100000001, y: 0}
+  m_ConnectedAnchor: {x: .100000001, y: -.300000012}
   serializedVersion: 2
   m_Angle: 0
   m_UseMotor: 1
