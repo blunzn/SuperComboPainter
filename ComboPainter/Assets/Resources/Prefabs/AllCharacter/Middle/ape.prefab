@@ -246,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0500000007, y: -.879999995, z: 0}
+  m_LocalPosition: {x: .280000001, y: -.879999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 455106}
@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.201920569, y: .866943836, z: 0}
+  m_LocalPosition: {x: .0786485374, y: 1.30463195, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455104}
@@ -388,9 +388,9 @@ MonoBehaviour:
   width: 21
   height: 21
   brushColors:
-  - {r: .925490201, g: 0, b: .549019635, a: 1}
-  - {r: .717647076, g: .925490201, b: 0, a: 1}
-  - {r: 0, g: .870588243, b: 1, a: 1}
+  - {r: .294117659, g: .447058827, b: .596078455, a: 1}
+  - {r: .403921574, g: .380392164, b: .31764707, a: 1}
+  - {r: .745098054, g: .513725519, b: .333333343, a: 1}
   texture: {fileID: 2800000, guid: 80924fbeb4e93430097f8ad5b36d3f2b, type: 3}
   keyRed: 1
   keyGreen: 2
@@ -409,9 +409,9 @@ MonoBehaviour:
   width: 21
   height: 21
   brushColors:
-  - {r: .717647076, g: .925490201, b: 0, a: 1}
-  - {r: 0, g: .870588243, b: 1, a: 1}
-  - {r: .925490201, g: 0, b: .549019635, a: 1}
+  - {r: .745098054, g: .513725519, b: .333333343, a: 1}
+  - {r: .294117659, g: .447058827, b: .596078455, a: 1}
+  - {r: .403921574, g: .380392164, b: .31764707, a: 1}
   texture: {fileID: 2800000, guid: 80924fbeb4e93430097f8ad5b36d3f2b, type: 3}
   keyRed: 1
   keyGreen: 2

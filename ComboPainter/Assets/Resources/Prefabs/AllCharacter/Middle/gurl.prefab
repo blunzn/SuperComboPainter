@@ -266,7 +266,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.392707705, y: .563928962, z: 0}
+  m_LocalPosition: {x: -.12336126, y: .317027956, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486590}
@@ -544,9 +544,9 @@ MonoBehaviour:
   width: 21
   height: 21
   brushColors:
-  - {r: .0632569268, g: .860294104, b: .46452409, a: 1}
-  - {r: 1, g: .724137902, b: 0, a: 1}
-  - {r: .295955896, g: .563514233, b: .875, a: 1}
+  - {r: .819607854, g: 1, b: .698039234, a: 1}
+  - {r: .737254918, g: .674509823, b: 1, a: 1}
+  - {r: .996078432, g: .470588237, b: .541176498, a: 1}
   texture: {fileID: 2800000, guid: 091da726d0f6c4a5ea44323fc87d3fde, type: 3}
   keyRed: 1
   keyGreen: 2
