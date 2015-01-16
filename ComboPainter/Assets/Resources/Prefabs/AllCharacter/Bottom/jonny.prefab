@@ -401,7 +401,7 @@ SliderJoint2D:
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: .100000001, y: -.800000012}
+  m_ConnectedAnchor: {x: .100000001, y: 0}
   serializedVersion: 2
   m_Angle: 0
   m_UseMotor: 1
