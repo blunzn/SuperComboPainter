@@ -26,7 +26,7 @@ public class CharacterManager : MonoBehaviour {
 		allTop = Resources.LoadAll ("Prefabs/AllCharacter/Top");
 		allBackgrounds = Resources.LoadAll ("Sprites/backgrounds");
 
-		crewSets = new string[3,3];
+		crewSets = new string[4,3];
 		crewSets [0,0] = "berta";
 		crewSets [0,1] = "schnauzer";
 		crewSets [0,2] = "ute";
@@ -36,6 +36,9 @@ public class CharacterManager : MonoBehaviour {
 		crewSets [2,0] = "niceUndies";
 		crewSets [2,1] = "gurl";
 		crewSets [2,2] = "dude_oben";
+		crewSets [3,0] = "delivery";
+		crewSets [3,1] = "ape";
+		crewSets [3,2] = "hendl";
 
 		crewSetIndex = 0;
 
