@@ -13,6 +13,8 @@ public class CharacterManager : MonoBehaviour {
 
 	public int finehide = 0;
 
+	public bool gameStarted;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -43,7 +45,7 @@ public class CharacterManager : MonoBehaviour {
 	
 	void newBackground()
 	{
-		GameObject bg = GameObject.Find ("Canvas");
+		GameObject bg = GameObject.Find ("PaintCanvas");
 		SpriteRenderer[] sp = bg.GetComponentsInChildren<SpriteRenderer> ();
 		int num = Random.Range (0, sp.Length);
 		for (int i = 0; i < sp.Length; ++i)
