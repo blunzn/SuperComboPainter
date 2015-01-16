@@ -92,31 +92,40 @@ public class CharacterManager : MonoBehaviour {
 			GameObject.Destroy(p);
 		}
 
+		Vector3 pos = transform.position;
+
 		GameObject temp = allBottom [Random.Range (0, allBottom.Length)] as GameObject;
-		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;
+		allCharacters [0] = Instantiate (temp, pos, Quaternion.identity) as GameObject;
 
 		temp = allMiddle[Random.Range (0, allMiddle.Length)] as GameObject;
 
 //		Transform bottom = temp.transform.FindChild ("bottom");
 //		Vector3 pos = bottom.position - bottom.localPosition;
 
-		allCharacters [1] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		pos.y += 2;
+
+		allCharacters [1] = Instantiate (temp, pos , Quaternion.identity) as GameObject;
 		connectDecoJoints[] djs = allCharacters [1].GetComponentsInChildren<connectDecoJoints> ();
 		foreach (connectDecoJoints dj in djs)
 						dj.connect (); 
 
-		allCharacters [1].SetActive (true);
+//		allCharacters [1].SetActive (false);
 		HingeJoint2D joint = allCharacters [1].GetComponent<HingeJoint2D> ();
 		joint.connectedBody = allCharacters [0].rigidbody2D;
 		joint.anchor = allCharacters [1].transform.FindChild ("bottom").localPosition;
 		joint.connectedAnchor = allCharacters [0].transform.FindChild ("top").localPosition;
+		
+//		allCharacters [1].SetActive (true);
 
 		temp = allTop[Random.Range (0, allTop.Length)] as GameObject;
 		
 		//		Transform bottom = temp.transform.FindChild ("bottom");
 		//		Vector3 pos = bottom.position - bottom.localPosition;
 		
-		allCharacters [2] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		
+		pos.y += 2;
+
+		allCharacters [2] = Instantiate (temp, pos, Quaternion.identity) as GameObject;
 		joint = allCharacters [2].GetComponent<HingeJoint2D> ();
 		joint.connectedBody = allCharacters [1].rigidbody2D;
 		joint.anchor = allCharacters [2].transform.FindChild ("bottom").localPosition;
@@ -136,16 +145,20 @@ public class CharacterManager : MonoBehaviour {
 		}
 
 		
+		Vector3 pos = transform.position;
+
 		GameObject temp = Resources.Load ("Prefabs/AllCharacter/Bottom/" + crewSets [crewSetIndex,0]) as GameObject;
 //			allBottom [Random.Range (0, allBottom.Length)] as GameObject;
-		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;
+		allCharacters [0] = Instantiate (temp, pos, Quaternion.identity) as GameObject;
 		
 		temp = Resources.Load ("Prefabs/AllCharacter/Middle/" + crewSets [crewSetIndex,1]) as GameObject;
 		
 		//		Transform bottom = temp.transform.FindChild ("bottom");
 		//		Vector3 pos = bottom.position - bottom.localPosition;
-		
-		allCharacters [1] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+
+		pos.y += 2;
+
+		allCharacters [1] = Instantiate (temp, pos , Quaternion.identity) as GameObject;
 		connectDecoJoints[] djs = allCharacters [1].GetComponentsInChildren<connectDecoJoints> ();
 		foreach (connectDecoJoints dj in djs)
 			dj.connect (); 
@@ -161,7 +174,9 @@ public class CharacterManager : MonoBehaviour {
 		//		Transform bottom = temp.transform.FindChild ("bottom");
 		//		Vector3 pos = bottom.position - bottom.localPosition;
 		
-		allCharacters [2] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		pos.y += 2;
+
+		allCharacters [2] = Instantiate (temp, pos , Quaternion.identity) as GameObject;
 		joint = allCharacters [2].GetComponent<HingeJoint2D> ();
 		joint.connectedBody = allCharacters [1].rigidbody2D;
 		joint.anchor = allCharacters [2].transform.FindChild ("bottom").localPosition;
