@@ -43,10 +43,10 @@ public class CharacterManager : MonoBehaviour {
 		crewSets [4,1] = "donut";
 		crewSets [4,2] = "marius1";
 
-		crewSetIndex = 0;
+		crewSetIndex = Random.Range(0, crewSets.Length/3);
 
 		newBackground ();
-		newCharacter();
+		newCrewSet();
 //		allCharacters = new GameObject[3];
 	}
 	
