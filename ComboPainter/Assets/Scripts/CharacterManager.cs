@@ -58,10 +58,10 @@ public class CharacterManager : MonoBehaviour {
 		if (Input.GetKeyDown ("n"))
 						newCrewSet ();
 
-		if (Input.GetKeyDown(KeyCode.LeftArrow) && finehide < 2)
+		if (Input.GetButtonDown("increaseFinehide") && finehide < 2)
 			finehide++;
 				
-		if (Input.GetKeyDown(KeyCode.RightArrow) && finehide > 0)
+		if (Input.GetButtonDown("decreaseFinehide") && finehide > 0)
 			finehide--;
 	}
 	
