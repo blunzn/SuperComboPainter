@@ -26,7 +26,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: hendl idle
-  m_Speed: 1
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: ea313ab9cd1c24b41ac9b163168b5989, type: 2}
