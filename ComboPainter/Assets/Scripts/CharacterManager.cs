@@ -15,6 +15,9 @@ public class CharacterManager : MonoBehaviour {
 
 	public bool gameStarted;
 
+	private string[,] crewSets;
+	private int crewSetIndex;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -22,6 +25,22 @@ public class CharacterManager : MonoBehaviour {
 		allMiddle = Resources.LoadAll ("Prefabs/AllCharacter/Middle");
 		allTop = Resources.LoadAll ("Prefabs/AllCharacter/Top");
 		allBackgrounds = Resources.LoadAll ("Sprites/backgrounds");
+
+		crewSets = new string[4,3];
+		crewSets [0,0] = "berta";
+		crewSets [0,1] = "schnauzer";
+		crewSets [0,2] = "ute";
+		crewSets [1,0] = "dot";
+		crewSets [1,1] = "TwoGirls";
+		crewSets [1,2] = "polka";
+		crewSets [2,0] = "niceUndies";
+		crewSets [2,1] = "gurl";
+		crewSets [2,2] = "dude_oben";
+		crewSets [3,0] = "delivery";
+		crewSets [3,1] = "ape";
+		crewSets [3,2] = "hendl";
+
+		crewSetIndex = 0;
 
 		newBackground ();
 		newCharacter();
@@ -35,6 +54,9 @@ public class CharacterManager : MonoBehaviour {
 			newCharacter();
 		if (Input.GetKeyDown ("v"))
 			newBackground();
+
+		if (Input.GetKeyDown ("n"))
+						newCrewSet ();
 
 		if (Input.GetKeyDown(KeyCode.LeftArrow) && finehide < 2)
 			finehide++;
@@ -98,6 +120,53 @@ public class CharacterManager : MonoBehaviour {
 		joint.connectedAnchor = allCharacters [1].transform.FindChild ("top").localPosition;
 
 //		allCharacters[0].transform.position.
+	}
+
+	void newCrewSet()
+	{
+		foreach (GameObject p in allCharacters) 
+		{
+			if(p == null)
+				continue;
+			
+			GameObject.Destroy(p);
+		}
+
+		
+		GameObject temp = Resources.Load ("Prefabs/AllCharacter/Bottom/" + crewSets [crewSetIndex,0]) as GameObject;
+//			allBottom [Random.Range (0, allBottom.Length)] as GameObject;
+		allCharacters [0] = Instantiate (temp, transform.position, Quaternion.identity) as GameObject;
+		
+		temp = Resources.Load ("Prefabs/AllCharacter/Middle/" + crewSets [crewSetIndex,1]) as GameObject;
+		
+		//		Transform bottom = temp.transform.FindChild ("bottom");
+		//		Vector3 pos = bottom.position - bottom.localPosition;
+		
+		allCharacters [1] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		connectDecoJoints[] djs = allCharacters [1].GetComponentsInChildren<connectDecoJoints> ();
+		foreach (connectDecoJoints dj in djs)
+			dj.connect (); 
+		
+		allCharacters [1].SetActive (true);
+		HingeJoint2D joint = allCharacters [1].GetComponent<HingeJoint2D> ();
+		joint.connectedBody = allCharacters [0].rigidbody2D;
+		joint.anchor = allCharacters [1].transform.FindChild ("bottom").localPosition;
+		joint.connectedAnchor = allCharacters [0].transform.FindChild ("top").localPosition;
+		
+		temp = Resources.Load ("Prefabs/AllCharacter/Top/" + crewSets [crewSetIndex,2]) as GameObject;
+		
+		//		Transform bottom = temp.transform.FindChild ("bottom");
+		//		Vector3 pos = bottom.position - bottom.localPosition;
+		
+		allCharacters [2] = Instantiate (temp, transform.position , Quaternion.identity) as GameObject;
+		joint = allCharacters [2].GetComponent<HingeJoint2D> ();
+		joint.connectedBody = allCharacters [1].rigidbody2D;
+		joint.anchor = allCharacters [2].transform.FindChild ("bottom").localPosition;
+		joint.connectedAnchor = allCharacters [1].transform.FindChild ("top").localPosition;
+		
+		//		allCharacters[0].transform.position.
+
+		crewSetIndex = (crewSetIndex+1) % (crewSets.Length/3);
 	}
 
 	public GameObject getPart(string part)
