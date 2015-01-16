@@ -50,12 +50,12 @@ public class CharacterManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown ("b"))
+		if (Input.GetButtonDown("newRandomCrew"))
 			newCharacter();
-		if (Input.GetKeyDown ("v"))
+		if (Input.GetButtonDown("newBackground"))
 			newBackground();
 
-		if (Input.GetKeyDown ("n"))
+		if (Input.GetButtonDown("newCrew"))
 						newCrewSet ();
 
 		if (Input.GetButtonDown("decreaseFinehide") && finehide < 2)
